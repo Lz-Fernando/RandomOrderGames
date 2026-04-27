@@ -7,7 +7,7 @@ const port = 3000
 
 app.use(cors());
 
-app.use('/api/jogos', jogoRoutes);
+app.use('/api/games', jogoRoutes);
 
 app.listen(port, () => {
     console.log(`Servidor rodando na porta ${port}`)
