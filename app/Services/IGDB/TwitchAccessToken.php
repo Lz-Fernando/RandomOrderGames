@@ -66,7 +66,7 @@ final class TwitchAccessToken
                     'grant_type' => 'client_credentials',
                 ]);
         } catch (ConnectionException $exception) {
-            Log::warning('Timeuout ou falha de conexão ao autenticar na Twitch');
+            Log::warning('Timeout ou falha de conexão ao autenticar na Twitch');
 
             throw new IgdbAuthenticationException(
                 'Não foi possível conectar ao serviço de autenticação da Twitch.',
@@ -90,7 +90,7 @@ final class TwitchAccessToken
 
             throw new IgdbAuthenticationException(
                 sprintf(
-                    'A autenticação da IGDB falhoou com o código HTTP %d.',
+                    'A autenticação da IGDB falhou com o código HTTP %d.',
                     $response->status(),
                 ),
             );
@@ -149,7 +149,7 @@ final class TwitchAccessToken
     {
         $clientId = config('igdb.igdb_client_id');
         $clientSecret = config('igdb.igdb_client_secret');
-        $authUrl = config('igdb.twitch_autentication_url');
+        $authUrl = config('igdb.twitch_authentication_url');
 
         if (
             ! is_string($clientId)
