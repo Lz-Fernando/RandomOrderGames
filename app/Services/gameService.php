@@ -6,7 +6,7 @@ namespace App\Services;
 
 use App\Services\IGDB\IgdbClient;
 
-final class gameService
+final class GameService
 {
     public function __construct(
         private readonly IgdbClient $igdbClient,
@@ -15,7 +15,7 @@ final class gameService
 
     }
 
-    public function getTrendingGames(): array
+    public function getPopularGames(): array
     {
         return [];
     }
